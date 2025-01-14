@@ -8,6 +8,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import Link from 'next/link';
 
 export interface ScheduleDetail {
   date: Date;
@@ -55,7 +56,7 @@ export function ScheduleTableSeminar({ schedules }: ScheduleTableProps) {
                   {formatDate(schedule.date)}
                 </TableCell>
                 <TableCell>{schedule.time}</TableCell>
-                <TableCell>{schedule.title}</TableCell>
+                <TableCell><Link href={"detail/seminar/a"} className='text-blue-700'>{schedule.title}</Link></TableCell>
                 <TableCell>{schedule.location}</TableCell>
                 <TableCell>{schedule.price}</TableCell>
               </TableRow>

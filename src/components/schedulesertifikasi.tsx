@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Table,
   TableBody,
@@ -8,6 +8,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 export interface ScheduleDetail {
   date: Date;
@@ -22,13 +23,12 @@ interface ScheduleTableProps {
 }
 
 export function ScheduleTable({ schedules }: ScheduleTableProps) {
-
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString('id-ID', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+    return date.toLocaleDateString("id-ID", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     });
   };
 
@@ -55,7 +55,11 @@ export function ScheduleTable({ schedules }: ScheduleTableProps) {
                   {formatDate(schedule.date)}
                 </TableCell>
                 <TableCell>{schedule.time}</TableCell>
-                <TableCell>{schedule.title}</TableCell>
+                <TableCell>
+                  <Link href={"detail/sertifikasi/a"} className="text-blue-700">
+                    {schedule.title}
+                  </Link>
+                </TableCell>
                 <TableCell>{schedule.location}</TableCell>
                 <TableCell>{schedule.price}</TableCell>
               </TableRow>
