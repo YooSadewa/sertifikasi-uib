@@ -1,18 +1,46 @@
 import type { Config } from "tailwindcss";
+const flowbite = require("flowbite-react/tailwind");
 
 export default {
-  content: [
+    darkMode: ["class"],
+    content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    flowbite.content(),
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+  	extend: {
+  		fontFamily: {
+  			sans: [
+  				'Archivo Black"',
+  				'sans-serif'
+  			]
+  		},
+  		colors: {
+  			background: 'var(--background)',
+  			foreground: 'var(--foreground)'
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		}
+  	}
   },
-  plugins: [],
+  plugins: [flowbite.plugin(), require("daisyui"), require("tailwindcss-animate")],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: "#3b82f6",
+          secondary: "#f43f5e",
+          accent: "#10b981",
+          neutral: "#111827",
+          "base-100": "#FFFFFF",
+        },
+      },
+    ],
+    darkTheme: "customBg",
+  },
 } satisfies Config;

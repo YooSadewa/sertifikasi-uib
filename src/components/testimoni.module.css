@@ -1,0 +1,4 @@
+.batik {
+    background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.2)), url("/assets/batik-bg.webp");
+    background-position: center;
+}

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --background: #ffffff;
@@ -9,13 +10,73 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #0a0a0a;
+    --background: #ededed;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.montserrat-light {
+  font-weight: 300;
+}
+
+.montserrat-regular {
+  font-weight: 400;
+}
+
+.montserrat-medium {
+  font-weight: 500;
+}
+
+.montserrat-bold {
+  font-weight: 700;
+}
+
+.navbaredit {
+  z-index: 100;
+}
+
+.carousel1 img {
+  border-radius: 0 !important;
+}
+
+.carousel1 div {
+  border-radius: 0 !important;
+}
+
+h1, h2{
+  color: #272e4f;
+}
+
+.background {
+  height: 65vh;
+  width: 90%;
+  margin: auto;
+}
+
+.background-2 {
+  background-image: linear-gradient(rgba(17, 57, 99,0.8), rgba(17, 57, 99,0.8)), url("/assets/bg-section.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.batik-bg {
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.9)), url("/assets/batik-bg.webp");
+}
+
+.color-navy {
+  color: #113963;
+}
+
+.mbm {
+  mix-blend-mode: lighten;
+  color: #ffffff;
 }
