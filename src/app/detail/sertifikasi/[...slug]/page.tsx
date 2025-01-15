@@ -8,38 +8,32 @@ export default function DetailSertifikasi() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div>
-      <section className="pt-[10vh] pb-32 background-2 px-[7vw] gap-10">
-        <div className="flex justify-between p-10 rounded-xl backdrop-blur-sm bg-white/60">
-          <div className="flex flex-col gap-0">
-            <div className="flex gap-5 w-[55vw]">
-              <div className="w-[30vw] flex items-center justify-center">
-                <Image
-                  src={"/assets/sertifikasi/sertifikasi-2.jpg"}
-                  alt="poster"
-                  width={1000}
-                  height={200}
-                  className="max-h-full max-w-full cursor-pointer"
-                  onClick={() => setIsModalOpen(true)}
-                />
-              </div>
-              <div className="flex py-5 items-center">
-                <div className="flex flex-col gap-1">
-                  <h1 className="font-bold text-[1.8em] text-black">
-                    Batch 2 - Perancangan Kontrak Pengadaan Barang dan Jasa -
-                    Pusat Sertifikasi
-                  </h1>
-                  <p className="text-xs italic">
-                    Perancangan Kontrak Pengadaan Barang dan Jasa{" "}
-                    <span className="not-italic">|</span> Pusat Sertifikasi
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p className="text-xs font-semibold text-black">
-              * Klik gambar untuk melihat detail gambar
+      <section className="pt-[10vh] pb-32 background-2 px-[7vw]">
+        <div className="flex justify-between p-10 rounded-xl backdrop-blur-sm bg-white/60 w-full">
+          <div className="flex items-center w-2/12">
+            <Image
+              src={"/assets/sertifikasi/sertifikasi-2.jpg"}
+              alt="poster"
+              width={1000}
+              height={100}
+              className="h-fit"
+              onClick={() => setIsModalOpen(true)}
+            />
+          </div>
+          <div className="w-7/12 flex flex-col ms-5 justify-center">
+            <h1 className="font-bold text-[1.8em] text-black break-words pe-10">
+              Batch 2 - Perancangan Kontrak Pengadaan Barang dan Jasa - Pusat
+              Sertifikasi
+            </h1>
+            <p className="text-xs italic">
+              Perancangan Kontrak Pengadaan Barang dan Jasa{" "}
+              <span className="not-italic">|</span> Pusat Sertifikasi
+            </p>
+            <p className="text-[12px] text-red-600">
+              * Klik gambar untuk melihat lebih jelas
             </p>
           </div>
-          <div className="flex flex-col w-[20vw] gap-2 justify-center">
+          <div className="flex flex-col w-3/12 gap-2 justify-center">
             <p className="text-[14px] font-semibold text-center">
               Tanggal Ujian : 02 Februari 2025
             </p>
