@@ -62,7 +62,7 @@ h1, h2{
 }
 
 .background-2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgb(255, 255, 255)), url("/assets/bg-section.jpg");
+  background-image: linear-gradient(rgba(17, 57, 99, 0.75), rgb(255, 255, 255)), url("/assets/bg-section.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

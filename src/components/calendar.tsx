@@ -8,14 +8,14 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
-  highlightedDates?: Date[]; // Changed from single date to array of dates
+  highlightedDates?: Date[];
 };
 
 function Calendar({
   className,
   classNames,
   showOutsideDays = true,
-  highlightedDates = [], // Default to empty array
+  highlightedDates = [],
   ...props
 }: CalendarProps) {
   const modifierStyles = {
@@ -31,7 +31,7 @@ function Calendar({
       <DayPicker
         showOutsideDays={showOutsideDays}
         modifiers={{
-          highlighted: highlightedDates, // Pass the array directly
+          highlighted: highlightedDates,
         }}
         modifiersStyles={modifierStyles}
         className={cn("p-3 w-full h-full", className)}
@@ -67,7 +67,7 @@ function Calendar({
           day_range_end: "day-range-end",
           day_selected:
             "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
-          day_today: "bg-[#272e4f] text-white rounded-[9999px]",
+          day_today: "!bg-[#272e4f] !text-white !rounded-full hover:!bg-[#272e4f] focus:!bg-[#272e4f]",
           day_outside:
             "day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground",
           day_disabled: "text-muted-foreground opacity-50",
